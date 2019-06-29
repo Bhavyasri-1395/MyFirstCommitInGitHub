@@ -1,0 +1,26 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="adrs" class="co.edureka.Address">
+		<property name="city" value="Hyderabad" />
+		<property name="state" value="Telangana" />
+		<property name="zipCode" value="503111" />
+	</bean>
+
+	<bean id="emp1" class="co.edureka.Employee" init-method="myInit"
+		destroy-method="myDestory">
+		<property name="eid" value="1666"/>
+		<property name="ename" value="Bhavyasri"/>
+        <constructor-arg ref="adrs"/>
+	</bean>
+	<!-- <bean id="emp2" class="co.edureka.Employee"> -->
+	<!-- <property name="eid" value="1667" /> -->
+	<!-- <property name="ename" value="Sravanthi" /> -->
+	<!-- <property name="eaddress" value="Chennai" /> -->
+	<!-- </bean> -->
+
+</beans>
